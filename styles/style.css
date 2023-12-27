@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+p{
+    font-size: 16px;
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color:black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.main-container{
+    width: 1100px;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container{
+    width: 90%;
+    }
+}
+
+.section-title{
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: #B0A695;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9 rem;
+}
+
+.title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: #B0A695;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 5px;
+    /* margin-left: 100px; */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    /* 3rem = 16px x 3 */
+}
+
+.logo img{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+#hero {
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* buat ngebagi satu layar jadi dua sama besar */
+    align-items: center;
+}
+
+.name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+.name span{
+    color: #F3B664;
+}
+
+.hero-right img{
+    width: 74%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+#skills {
+    padding: 6rem 0;
+    margin-bottom: 80px;
+}
+
+.skills .title{
+    margin: 0 auto;
+}
+.skills-title{
+    text-align: center;
+}
+.skill-icon img{
+    width: 80px;
+    
+}
+.skill-icon {
+    max-width: 80px;
+}
+.skill {
+    max-width: 80px;
+    /* background-color: ; */
+}
+#projects {
+    display: grid;
+}
+.projek1 {
+    margin-right: 50px;
+}
+/* projek */
+.projek {
+    width: 340px;
+    border: 1px solid;
+    border-radius: 0 25px 25px 25px;
+    margin-bottom: 20px;
+}
+
+.projek-cover {
+    height: 280px;
+    margin-bottom: -130px;
+}
+ .projek-cover img {
+    border-radius: 0 25px 0 0;
+    width: 100%;
+} 
+
+.projek-info {
+    padding: 2rem 1.5rem;
+    margin-left: 20px;
+}
+
+.projek-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.projek h4 {
+    font-weight: 500;
+}
+
+.projek p {
+    color: #607274;
+}
+
+/* CSS Kustom */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.sertifikat {
+    width: 33%; /* Setiap sertifikat memenuhi 1/3 lebar container */
+    box-sizing: border-box; /* Tambahkan box-sizing untuk memastikan lebar dan padding dihitung dengan benar */
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.sertifikat img {
+    width: 305%;
+}
+
+.sertifikat-cover {
+    text-align: center; /* Menengahkan gambar dalam sertifikat */
+}
+
+#contact {
+    padding: 2rem ;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.contact-from div{
+    margin-bottom: 1.4rem;
+}
+
+#contact img {
+    width: 30px;
+}
+#contact p {
+    color: #607274;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background-color: rgba(238, 238, 238, 0.849);
+    border: 1px solid #cdcac0;
+    border-radius: 3px;
+}
+
+.btn-submit {
+    width: 90%;
+    padding: 0.75rem 1.3rem;
+    background-color: #F3B664;
+    color: antiquewhite;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.btn-submit:hover {
+    background-color: #f4a033;
+}
+
+footer {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.footer-icon {
+    margin-bottom: 1rem;
+}
+
+.footer-icon a{
+    margin: 0 0.5rem;
+}
